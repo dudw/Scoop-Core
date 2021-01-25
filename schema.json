@@ -113,11 +113,11 @@
                             "type": "string"
                         },
                         {
-                            "pattern": "^(\\$url|\\$baseurl).[\\w\\d]+$",
+                            "pattern": "^(\\${?(base)?url}?).[\\w\\d]+$",
                             "type": "string"
                         },
                         {
-                            "pattern": "^.*(\\$url|\\$baseurl).*$",
+                            "pattern": "^.*(\\${?(base)?url}?).*$",
                             "type": "string"
                         }
                     ]
@@ -398,14 +398,26 @@
                 }
             ]
         },
+        "autoupdateUrl": {
+            "description": "Specify URL to be updated.",
+            "anyOf": [
+                {
+                    "type": "string",
+                    "format": "uri"
+                },
+                {
+                    "type": "string",
+                    "regex": "(https?://)*([www.])*\\w+\\.\\w+\\D+"
+                }
+            ]
+        },
         "autoupdateArchitecture": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
                 "url": {
-                    "description": "Specify URLs to be updated.",
-                    "type": "string",
-                    "format": "uri"
+                    "description": "Specify URL to be updated.",
+                    "$ref": "#/definitions/autoupdateUrl"
                 },
                 "hash": {
                     "description": "Specify how hashes are calculated on update.",
@@ -442,9 +454,8 @@
                     }
                 },
                 "url": {
-                    "description": "Specify the URL to be updated.",
-                    "type": "string",
-                    "format": "uri"
+                    "description": "Specify URL to be updated.",
+                    "$ref": "#/definitions/autoupdateUrl"
                 },
                 "hash": {
                     "description": "Specify the hash extraction process for URLs.",
@@ -458,6 +469,10 @@
         }
     },
     "properties": {
+        "$schema": {
+            "description": "Specify path to the json schema, used for validation of the json file.",
+            "type": "string"
+        },
         "_comment": {
             "description": "Deprecated. Use '##' instead.",
             "$ref": "#/definitions/stringOrArrayOfStrings"

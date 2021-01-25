@@ -2,6 +2,11 @@
 
 ## [0.6](https://github.com/Ash258/Scoop-Core/milestone/4)
 
+### 0.6-pre2
+
+- **checkver**: Fix schema validation for curly bracket variables in autoupdate
+- **autoupdate**: Do not autoupdate unless URL is accessible after sucessfull hash extraction
+
 ### 0.6-pre1
 
 - Support YAML typed manifests in some commands
