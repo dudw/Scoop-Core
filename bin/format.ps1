@@ -145,6 +145,10 @@ foreach ($gci in Get-ChildItem $Dir "$App.*" -File) {
     }
     #endregion Architecture properties sort
 
+    if ($manifest.'$schema') {
+        $manifest.PSObject.Properties.Remove('$schema')
+    }
+
     $newManifest = [PSCustomObject] @{ }
     '##', '_comment', 'version', 'description', 'homepage', 'license', 'notes', 'changelog', 'depends' | ForEach-Object {
         if ($manifest.$_) {
