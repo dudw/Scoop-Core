@@ -5,6 +5,16 @@
 ### 0.6-pre2
 
 - **checkver**: Fix schema validation for curly bracket variables in autoupdate
+- **schema**
+    - Remove deprecated short properties
+    - Cleanup descriptions
+- Remove deprecated functions from code-base
+- **binaries**: Indicate binary execution errors with exit codes
+- Git operations with custom wrapper are now executable under Unix-like systems
+- **auto-pr**
+    - Refactor all git/hub calls to use -C option
+- **scoop-checkup**: Test full shovel adoption
+- **scoop-alias**: First alias addition is correctly registered and created
 - **autoupdate**: Do not autoupdate unless URL is accessible after sucessfull hash extraction
 
 ### 0.6-pre1
