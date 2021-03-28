@@ -5,6 +5,7 @@
 ### 0.6-pre3
 
 - **schema**: Fix validation for curly bracket variables in autoupdate
+- **checkver**: Properly reflect execution issues with exit code
 
 ### 0.6-pre2
 
