@@ -1,5 +1,5 @@
 @(
-    @('core', 'Get-UserAgent'),
+    @('core', 'Test-ScoopDebugEnabled'),
     @('Helpers', 'Get-MagicByte'),
     @('commands', 'Invoke-ScoopCommand')
 ) | ForEach-Object {
