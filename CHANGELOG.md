@@ -2,6 +2,7 @@
 
 ## [0.6.5](https://github.com/Ash258/Scoop-Core/milestone/5)
 
+- Add `Base` bucket to known
 - **scoop-checkup**: Do not suggest 7zip installation when `7ZIPEXTRACT_USE_EXTERNAL` is configured
 - **scoop-search**:
     - Do not fail when parsing invalid local manifest
@@ -11,6 +12,8 @@
     - Initial support for `arm64` architecture
     - Allow `$schema` property
 - **CI**:
+    - Files with multiple empty lines at the end now produce error
+    - `UTF8-Bom`, `UTF16 BE`, `UTF16 LE` files are prohibited
     - Support basic validation of yml typed manifests
     - Support validation of all archived manifests
 - **scoop-cat**: Add `-f`, `--format` options
