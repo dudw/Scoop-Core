@@ -2,6 +2,8 @@
 
 ## [0.6.5](https://github.com/Ash258/Scoop-Core/milestone/5)
 
+- Internal modules/libs are loaded only when not loaded already
+- **Checkver**: URL ping behaviour equality with `dl` function
 - Add `Base` bucket to known
 - **scoop-checkup**: Do not suggest 7zip installation when `7ZIPEXTRACT_USE_EXTERNAL` is configured
 - **scoop-search**:
